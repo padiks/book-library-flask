@@ -109,7 +109,7 @@ Inside the virtual environment:
 python3 -m waitress --listen=0.0.0.0:4040 app:app
 ```
 
-* Replace `tutorial.py` with your main Flask file if named differently.
+* Replace `app.py` with your main Flask file if named differently.
 * Visit `http://<your-debian-ip>:4040` to check it works.
 
 ---
