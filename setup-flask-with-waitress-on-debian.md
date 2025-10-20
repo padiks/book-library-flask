@@ -61,6 +61,7 @@ pip install flask waitress markdown jinja2 markupsafe
 * `waitress` – Production WSGI server
 * `markdown` – For rendering Markdown files
 * `jinja2` – Template engine
+* `markupsafe` – Safely handles strings in HTML/XML to prevent injection
 
 If you have a `requirements.txt` in your app:
 
@@ -72,22 +73,30 @@ pip install -r requirements.txt
 
 ## 5. Modify Flask App for Waitress
 
-Replace the last part:
+First, adjust your imports depending on your OS:
+
+```python
+# Windows
+# from flask import Flask, render_template, render_template_string, abort, Markup, url_for
+
+# Debian/Linux
+from flask import Flask, render_template, render_template_string, abort, url_for
+from markupsafe import Markup
+````
+
+Next, replace the usual Flask development server block:
 
 ```python
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=4040, debug=True)
-```
+    # Original Flask dev server (for reference)
+    # app.run(host='0.0.0.0', port=4040, debug=True)
 
-with Waitress:
-
-```python
-if __name__ == '__main__':
+    # Production-ready server using Waitress
     from waitress import serve
     serve(app, host='0.0.0.0', port=4040)
 ```
 
-> This allows the app to run via Waitress, which is production-ready.
+> This allows the app to run via Waitress, which is production-ready and suitable for deployment.
 
 ---
 
