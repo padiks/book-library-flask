@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="title">Search Results for “{{ query }}”</h2>
+
+<div class="content">
+  {% if not results %}
+    <p>No matching documents found.</p>
+  {% else %}
+    {% for item in results %}
+      <div class="result">
+        <h4><a href="{{ item.url }}">{{ item.path }}</a></h4>
+        <p>{{ item.match_snippet }}</p>
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>
+
+<div class="meta-bottom">
+  <i class="bi bi-folder"></i>
+  <ul class="cats">
+    <li><a href="{{ url_for('home') }}">Books</a></li>
+  </ul>
+
+  <i class="bi bi-tags"></i>
+  <ul class="tags">
+    {% if query %}
+      <li>
+        <a href="{{ url_for('search', q=query) }}">{{ query.capitalize() }}</a>
+      </li>
+    {% else %}
+      <li>
+        <a href="{{ url_for('search', q='light novel') }}">Light Novel</a>
+      </li>
+    {% endif %}
+  </ul>
+</div>
+
+{% endblock %}
