@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% block content %}
 
-<h2 class="title">List of Light Novels</h2>
+{% block content %}
+<h2 class="title">Sitemap</h2>
 <div class="content">
 
 	<p>
@@ -12,15 +12,24 @@
 		deai, saigo no peeji o yonda nochi mo kokoro ni nokoru bouken o keiken saseru.
 	</p>
 
-<ul>
-  <li><a href="books/isekai-mokushiroku">Isekai Mokushiroku Mainogura</a></li>
-	<li><a href="{{ url_for('render_md', md_path='lorem-ipsum') }}">Lorem ipsum dolor sit amet</a></li>
-</ul>
-<h2 class="title">List of Music Lyrics</h2>
-<ul>
-  <li><a href="{{ url_for('render_md', md_path='lyrics/blaiz-fayah-bad') }}">Blaiz Fayah - Bad</a></li>
-  <li><a href="{{ url_for('render_md', md_path='lyrics') }}">README</a></li>
-</ul>
+  {% if not books %}
+    <p>No files found.</p>
+  {% else %}
+    <ul>
+      {% for book_name, chapters in books.items() %}
+        <li><strong>{{ book_name }}</strong>
+          <ul>
+            {% for chapter in chapters %}
+              <li>
+                <a href="{{ url_for('render_md', md_path=chapter['path']) }}">
+                  {{ chapter['title'] }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 </div>
-
 {% endblock %}
