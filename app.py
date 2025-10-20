@@ -161,6 +161,65 @@ def sitemap():
             books_dict[book_folder.replace('-', ' ').title()] = chapters
 
     return render_template('sitemap.html', books=books_dict, title="Sitemap")	
+
+# ------------------------------
+# Search route
+# ------------------------------
+from flask import request
+
+@app.route('/search')
+def search():
+    """
+    Search all Markdown files in /books for a query string.
+    Displays snippets and links to matching files.
+    """
+    query = request.args.get('q', '').strip()
+    results = []
+
+    if query:
+        # Find all markdown files recursively under 'books'
+        for root, dirs, files in os.walk('books'):
+            for file in files:
+                if file.endswith('.md'):
+                    full_path = os.path.join(root, file)
+                    try:
+                        with open(full_path, 'r', encoding='utf-8') as f:
+                            content = f.read()
+                    except Exception:
+                        continue  # Skip unreadable files
+
+                    # Case-insensitive match
+                    if re.search(re.escape(query), content, re.IGNORECASE):
+                        # Get position of match and short snippet
+                        pos = re.search(re.escape(query), content, re.IGNORECASE).start()
+                        snippet_start = max(0, pos - 30)
+                        snippet = content[snippet_start: pos + 150]
+
+                        # Clean snippet of markdown and HTML
+                        snippet = re.sub(r'[#>*_`~\-]+', '', snippet)
+                        snippet = re.sub(r'<[^>]*>', '', snippet)
+                        snippet = snippet.strip()
+
+                        # Derive path and link (relative to /books/)
+                        rel_path = os.path.relpath(full_path, 'books')
+                        url_path = rel_path.replace('\\', '/').replace('.md', '')
+
+                        # Book = first folder name
+                        parts = url_path.split('/')
+                        book = parts[0]
+                        volume = parts[-1]
+
+                        results.append({
+                            'path': url_path,
+                            'url': url_for('render_md', md_path=url_path),
+                            'book': book,
+                            'volume': volume,
+                            'match_snippet': snippet + '...'
+                        })
+
+    # Render template
+    return render_template('search.html', title="Search Results", query=query, results=results)
+
 		
 # ------------------------------
 # 404 handler
