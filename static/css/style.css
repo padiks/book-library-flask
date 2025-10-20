@@ -1,0 +1,203 @@
+:root {
+  --default-font: "Spectral", Arial, sans-serif;
+  --heading-font: "IM Fell English", "Nunito", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+.copyright, .credits {
+  font-family: "Poppins", sans-serif;
+}
+.content p, .article p,  .article ul {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #222;
+  max-width: 56.25rem;
+  margin: 0 auto 0;
+  padding: 0.25rem 1rem 1rem;
+  background-color: #fff;
+}
+
+/* ID-based reusable quote style (unique per page) #fff8f2; */
+#q {
+  display: block;
+	background-color: #f0f0f0;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  color: #555;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+/* if you put a <p> inside the container, remove its default spacing/bg */
+#q p {
+  margin: 0;
+  background-color: transparent;
+}
+
+/* ensure any child elements don't show a white background */
+#q * {
+  background-color: transparent;
+}
+
+/* Content list links with square bullets, tab, and slightly softened black links */
+.blog-details .content ul,
+.article .content ul {
+  list-style-type: square;    /* square bullets */
+  padding-left: 2.5em;        /* 5-space tab */
+  margin-left: 0;
+}
+
+.blog-details .content ul li {
+  margin-bottom: 0.5em;       /* spacing between items */
+}
+
+.blog-details .content ul li a,
+.article .content ul li a {
+  color: #222 !important;      /* slightly softer black */
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.blog-details .content ul li a:hover,
+.article .content ul li a:hover {
+  color: #007bff !important;   /* blue on hover */
+  text-decoration: underline !important;
+}
+
+/* Content list links with square bullets, tab, and slightly softened black links */
+.blog-details .content ul,
+.article .content ul,
+.blog-details .markdown-content ul,
+.article .markdown-content ul {
+  list-style-type: square;    /* square bullets */
+  padding-left: 1.5em;        /* 5-space tab */
+  margin-left: 0;
+}
+
+.blog-details .content ul li,
+.article .content ul li,
+.blog-details .markdown-content ul li,
+.article .markdown-content ul li {
+  margin-bottom: 0.5em;       /* spacing between items */
+}
+
+.blog-details .content ul li a,
+.article .content ul li a,
+.blog-details .markdown-content ul li a,
+.article .markdown-content ul li a {
+  color: #222 !important;      /* slightly softer black */
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.blog-details .content ul li a:hover,
+.article .content ul li a:hover,
+.blog-details .markdown-content ul li a:hover,
+.article .markdown-content ul li a:hover {
+  color: #007bff !important;   /* blue on hover */
+  text-decoration: underline !important;
+}
+
+/* Style for "Read more" links inside paragraphs */
+.blog-details .content p a,
+.article .content p a,
+.blog-details .markdown-content p a,
+.article .markdown-content p a {
+  color: #222 !important;       /* dark by default */
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.blog-details .content p a:hover,
+.article .content p a:hover,
+.blog-details .markdown-content p a:hover,
+.article .markdown-content p a:hover {
+  color: #007bff !important;    /* blue on hover */
+  text-decoration: underline !important;
+}
+
+/* Underline and disabled text styling:
+   - `u`: custom light gray underline using gradient
+   - `.d`: disabled/gray text with default bullet preserved */
+u {
+  text-decoration: none;
+  background-image: linear-gradient(to right, #ccc, #eee);
+  background-repeat: no-repeat;
+  background-size: 100% 0.15em;
+  background-position: 0 1.15em;
+  padding-bottom: 0.3em;
+  color: #333;
+  font-weight: 500;
+}
+
+.d {
+  color: #999 !important;
+  font-weight: 500 !important;
+  cursor: default !important;
+  text-decoration: none !important;
+}
+
+.d::marker {
+  color: initial !important;
+}
+
+/* Blockquote styling with Special Elite typewriter font, big opening quote, and adjusted spacing */
+blockquote {
+	height: 100%;
+	margin-bottom: -15px !important;
+	font-family: "Special Elite", Arial, cursive;
+	font-weight: 100;
+	font-size: 2rem;
+	max-width: 700px;       
+	line-height: 1.4;
+	position: relative;
+	margin: 0 auto;         
+	padding: .5rem 0.5rem;
+}
+
+blockquote:before {
+	content: '“';
+	position: absolute;
+	color: #f1efe6;
+	font-size: 6rem;
+	left: -1.4rem;
+	top: -1.4rem;
+}
+
+blockquote:after {
+	content: none;
+}
+
+/* ────────────────────────────────
+   Chapter navigation (Previous / Next)
+   ──────────────────────────────── */
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 56.25rem;          /* same as .content p */
+  margin: 2rem auto 2em;
+  padding: 0 1rem;
+  font-family: var(--default-font);
+}
+
+.chapter-nav a {
+  color: #222;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  background-color: #fff;       /* match content background */
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+.chapter-nav a:hover {
+  color: #007bff;
+  border-color: #007bff;
+  text-decoration: none;        /* no underline */
+}
+
+/* Center if only one link exists */
+.chapter-nav a:only-child {
+  margin: 0 auto;
+}

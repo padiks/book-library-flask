@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title> ぷらいべーと らいぶらり - {{ title or "FlexStart designed by BootstrapMade" }}</title>
+<link href="static/img/book_207114.png" rel="icon">
+<link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/mode.css') }}" rel="stylesheet">
+<!-- =======================================================
+* Template Name: FlexStart
+* Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+* Updated: Nov 01 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+======================================================== -->
+</head>
+<body class="blog-details-page">
+<header id="header" class="header d-flex align-items-center sticky-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
+    <a href="http://localhost:8080/tools/codeigniter/" class="logo d-flex align-items-center me-auto">
+      <img src="static/img/logo.png" alt="">
+      <h1 class="sitename">らいぶらり Raito Noberu Toshokan</h1>
+    </a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#">Home<br></a></li>
+        <li><a href="https://flask.palletsprojects.com/en/stable/">Docs</a></li>
+        <li><a href="books/markdown-guide/">Markdown</a></li>
+        <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="https://flask.palletsprojects.com/en/stable/deploying/waitress/">Flask’s documentation</a></li>
+            <li><a href="https://pypi.org/project/Flask/">Project Flask pypi.org</a></li>
+						<li><a href="https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3">Flask Web App from Scratch</a></li>
+          </ul>
+        </li>
+        <li><a href="sitemap">Sitemap</a></li>
+        <li><a href="logout">
+						Logout</a>
+        </li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+    <a href="#" id="modeToggle" class="btn-mode-toggle d-flex align-items-center justify-content-center ms-3" title="Toggle dark/light mode">
+      <i class="bi bi-sun-fill" id="modeIcon"></i>
+    </a>
+  </div>
+</header>
+<main class="main">
+<!-- Hero Section -->
+{% if show_hero %}{% include "hero.html" %}{% endif %}
+<!-- /Hero Section -->
+<div class="container">
+<div class="row">			
+<div class="col-lg-8">
+<section id="ln" class="blog-details section">
+<div class="container">
+<article class="article">
+<!-- Content starts here -->
+<main>
+{% block content %}
+{% endblock %}
+</main>
+<!-- C:\laragon\www\tools\flaskapp\app\home.html -->
+<!-- Content ends here -->
+</article>
+</div>
+</section>
+  <section id="blog-author" class="blog-author section">
+    <div class="container">
+      <div class="author-container d-flex align-items-center">
+        <div>
+          <h4>「物語散策」(Monogatari Sansaku)</h4>
+          <p>
+            EXPLORE the worlds of imagination and adventure through these tales. 
+            Each story invites you to travel beyond the ordinary, meet unforgettable 
+            characters, and experience journeys that stay with you long after the 
+            last page is turned.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="blog-comments" class="blog-comments section">
+    <div class="container">
+      <div id="comment-1" class="comment">
+        <div class="d-flex">
+          <div>
+            <h5>「百聞は一見に如かず」(Hyakubun wa ikken ni shikazu) </h5>
+            <p>“Hearing something a hundred times is not as good as seeing it once.” Experiencing the words yourself is far more powerful than only hearing about it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="col-lg-4 sidebar">
+  <div class="widgets-container">
+		<div class="search-widget widget-item">
+			<h3 class="widget-title">Search</h3>
+			<form action="http://localhost:8080/tools/codeigniter/search" method="get">
+				<input type="text" name="q" placeholder="Search..." required>
+				<button type="submit" title="Search"><i class="bi bi-search"></i></button>
+			</form>
+		</div>		
+    <div class="recent-posts-widget widget-item">
+      <h3 class="widget-title">Novel Sites</h3>
+			<div class="post-item" style="display:flex; align-items:center; gap:12px;">
+				<div class="flex-shrink-0" style="width:60px; height:60px; border-radius:4px;">
+					<svg width="100%" height="100%" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+						<rect width="80" height="80" fill="#e9f5f2"/>
+						<rect x="5" y="10" width="18" height="18" fill="#f94144" opacity="0.7"/>
+						<rect x="25" y="20" width="14" height="20" fill="#f3722c" opacity="0.6"/>
+						<rect x="40" y="5" width="28" height="10" fill="#277da1" opacity="0.5"/>
+						<circle cx="50" cy="50" r="8" fill="#f94144" opacity="0.6"/>
+						<circle cx="20" cy="60" r="6" fill="#f3722c" opacity="0.5"/>
+						<circle cx="60" cy="20" r="5" fill="#277da1" opacity="0.6"/>
+					</svg>
+				</div>
+				<div>
+					<h4 style="margin:0;"><a href="https://en.wikipedia.org/wiki/Accomplishments_of_the_Duke%27s_Daughter" target="_blank" rel="noopener">Koshaku Reijo no Tashinami</a></h4>
+					<p style="margin:0;"><time datetime="2020-01-01">	February 7, 2015</time></p>
+				</div>
+			</div>
+			<div class="post-item" style="display:flex; align-items:center; gap:12px;">
+				<div class="flex-shrink-0" style="width:60px; height:60px; border-radius:4px;">
+					<svg width="100%" height="100%" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+						<rect width="80" height="80" fill="#e9f5f2"/>
+						<rect x="10" y="15" width="12" height="12" fill="#f94144" opacity="0.7"/>
+						<rect x="35" y="25" width="18" height="15" fill="#f3722c" opacity="0.6"/>
+						<rect x="50" y="5" width="20" height="10" fill="#277da1" opacity="0.5"/>
+						<circle cx="25" cy="50" r="6" fill="#f94144" opacity="0.6"/>
+						<circle cx="45" cy="60" r="7" fill="#f3722c" opacity="0.5"/>
+						<circle cx="60" cy="25" r="5" fill="#277da1" opacity="0.6"/>
+					</svg>
+				</div>
+				<div>
+					<h4 style="margin:0;"><a href="https://en.wikipedia.org/wiki/How_a_Realist_Hero_Rebuilt_the_Kingdom">Genjitsu Shugi Yusha no Okoku Saikenki</a></h4>
+					<p style="margin:0;"><time datetime="2020-01-01">2014</time></p>
+				</div>
+			</div>
+			<div class="post-item" style="display:flex; align-items:center; gap:12px;">
+				<div class="flex-shrink-0" style="width:60px; height:60px; border-radius:4px;">
+					<svg width="100%" height="100%" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+						<rect width="80" height="80" fill="#e9f5f2"/>
+						<rect x="10" y="10" width="15" height="25" fill="#06d6a0" opacity="0.7"/>
+						<rect x="30" y="20" width="20" height="10" fill="#118ab2" opacity="0.6"/>
+						<circle cx="55" cy="50" r="9" fill="#8338ec" opacity="0.6"/>
+						<circle cx="25" cy="55" r="6" fill="#ffd60a" opacity="0.5"/>
+						<polygon points="50,15 70,25 60,40" fill="#ef476f" opacity="0.5"/>
+					</svg>
+				</div>
+				<div>
+					<h4 style="margin:0;"><a href="https://isekai.fandom.com/wiki/Horobi_no_Kuni_no_Seifukusha:_Maou_wa_Sekai_wo_Seifuku_suru_you_desu">Horobi no Kuni no Seifukusha</a></h4>
+					<p style="margin:0;"><time datetime="2020-01-01">January 2015</time></p>
+				</div>
+			</div>
+			<div class="post-item" style="display:flex; align-items:center; gap:12px;">
+				<div class="flex-shrink-0" style="width:60px; height:60px; border-radius:4px;">
+					<svg width="100%" height="100%" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+						<rect width="80" height="80" fill="#e9f5f2"/>
+						<polygon points="10,70 30,40 15,20" fill="#ef476f" opacity="0.6"/>
+						<rect x="40" y="15" width="25" height="8" fill="#118ab2" transform="rotate(10 50 20)" opacity="0.7"/>
+						<circle cx="60" cy="55" r="10" fill="#ffd60a" opacity="0.6"/>
+						<ellipse cx="25" cy="55" rx="8" ry="5" fill="#06d6a0" opacity="0.5"/>
+						<polygon points="45,35 65,45 55,60" fill="#8338ec" opacity="0.5"/>
+					</svg>
+				</div>
+				<div>
+					<h4 style="margin:0;"><a href="https://j-novel.club/series/the-ideal-sponger-life">Risou no Himo Seikatsu</a></h4>
+					<p style="margin:0;"><time datetime="2020-01-01">2011</time></p>
+				</div>
+			</div>
+    </div>
+    <div class="categories-widget widget-item">
+      <h3 class="widget-title">Tech & Media</h3>
+      <ul class="mt-3">
+        <li><a href="https://www.freebsd.org/press/">FreeBSD in the Press</a></li>
+        <li><a href="https://www.debian.org/News/">Debian Latest News</a></li>
+        <li><a href="https://blog.getbootstrap.com/">The Bootstrap Blog</a></li>
+        <li><a href="https://nyaa.si/?f=0&c=3_1&q">Browse :: Nyaa</a></li>
+        <li><a href="https://lightnovelpub.me/">Reading Novel Free</a></li>
+        <li><a href="https://novelfire.net/home">Fictional stories Hub</a></li>
+        <li><a href="https://www.webnovel.com/">Meet Webnovel</a></li>
+        <li><a href="https://lightnovelpub.org/">Light Novel Pub</a></li>
+      </ul>
+    </div>    
+    <div class="tags-widget widget-item">
+      <h3 class="widget-title">Tags</h3>
+      <ul>
+        <li><a href="http://localhost:8080/tools/codeigniter/search?q=debian">Debian</a></li>
+        <li><a href="http://localhost:8080/tools/codeigniter/search?q=freebsd">FreeBSD</a></li>
+        <li><a href="http://localhost:8080/tools/codeigniter/search?q=light+novel">Light Novel</a></li>
+        <li><a href="http://localhost:8080/tools/codeigniter/search?q=linux">Linux</a></li>
+        <li><a href="http://localhost:8080/tools/codeigniter/search?q=lyrics">Lyrics</a></li>
+        <li><a href="http://localhost:8080/tools/codeigniter/search?q=web+novel">Web Novel</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</main>
+<footer id="footer" class="footer">
+	<div class="container copyright text-center mt-4">
+		<p>&copy; <span>2025</span><strong class="px-1 sitename">ライブラリ Raito Noberu Toshokan.</strong> <span>All Rights Reserved.</span></p>
+		<div class="credits">
+			Powered by by <a href="https://flask.palletsprojects.com/en/stable/">Flask v3.1.2</a> |
+			<!-- All the links in the footer should remain intact. -->
+			<!-- You can delete the links only if you've purchased the pro version. -->
+			<!-- Licensing information: https://bootstrapmade.com/license/ -->
+			<!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+			Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> |
+			Images by <a href="https://allpng.net/" target="_blank">AllPNG</a> &amp; <a href="https://www.kindpng.com/" target="_blank">KindPNG</a> |
+			Favicon by <a href="https://www.freepik.com/" target="_blank">Freepik</a>
+		</div>
+	</div>
+</footer>
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/js/main.js"></script>
+<script src="static/js/mode.js"></script>
+</body>
+</html>

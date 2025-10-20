@@ -1,0 +1,284 @@
+/* ---------- Dark Mode ---------- */
+body.dark-mode {
+  background-color: #000; /* full black page background */
+  color: #e0e0e0;
+}
+
+/* ---------- Navbar ---------- */
+body.dark-mode #header,
+body.dark-mode #navmenu,
+body.dark-mode #navmenu ul li.dropdown ul {
+  background-color: #000 !important;
+}
+
+body.dark-mode #header .logo h1,
+body.dark-mode #header a.nav-link,
+body.dark-mode #header .btn-mode-toggle,
+body.dark-mode #navmenu ul li a,
+body.dark-mode #navmenu .mobile-nav-toggle,
+body.dark-mode #navmenu ul li.dropdown ul li a {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode #navmenu ul li a:hover,
+body.dark-mode #navmenu ul li a:focus,
+body.dark-mode #navmenu ul li.dropdown ul li a:hover {
+  color: #ffd700 !important;
+}
+
+/* ---------- Sidebar ---------- */
+body.dark-mode .sidebar,
+body.dark-mode .sidebar .widgets-container,
+body.dark-mode .sidebar .widget-item {
+  background-color: #000 !important;
+  color: #e0e0e0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .sidebar .widget-title {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .sidebar .widget-item a {
+  color: #ccc !important;
+  text-decoration: none !important;
+}
+
+body.dark-mode .sidebar .widget-item a:hover {
+  color: #ffd700 !important;
+}
+
+/* ---------- Search Widget ---------- */
+body.dark-mode .sidebar .search-widget input,
+body.dark-mode .sidebar .search-widget button {
+  background-color: #000 !important;
+  color: #e0e0e0 !important;
+  border: none !important;
+}
+
+body.dark-mode .sidebar .search-widget input::placeholder {
+  color: #888 !important;
+}
+
+body.dark-mode .sidebar .search-widget button:hover {
+  background-color: #111 !important;
+}
+
+/* ---------- Recent Posts & Tags ---------- */
+body.dark-mode .sidebar .recent-posts-widget .post-item,
+body.dark-mode .sidebar .tags-widget ul li a {
+  background-color: #000 !important;
+  color: #e0e0e0 !important;
+  border: none !important;
+}
+
+body.dark-mode .sidebar .tags-widget ul li a:hover {
+  background-color: #111 !important;
+  color: #ffd700 !important;
+}
+
+/* ---------- Main Content & Articles ---------- */
+body.dark-mode .main .content,
+body.dark-mode .main article,
+body.dark-mode .main p,
+body.dark-mode #ln,
+body.dark-mode #ln .container,
+body.dark-mode #ln .article,
+body.dark-mode #ln .content,
+body.dark-mode #blog-comments,
+body.dark-mode #blog-comments .container,
+body.dark-mode #blog-comments .comment,
+body.dark-mode #blog-author,
+body.dark-mode #blog-author .author-container {
+  background-color: #000 !important;
+  color: #e0e0e0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* ---------- Comment Section Fix ---------- */
+body.dark-mode .comment,
+body.dark-mode .comment-body,
+body.dark-mode .comment-form,
+body.dark-mode .comment-reply-form,
+body.dark-mode .form-control,
+body.dark-mode textarea,
+body.dark-mode input {
+  background-color: #000 !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #444 !important;
+}
+
+body.dark-mode textarea::placeholder,
+body.dark-mode input::placeholder {
+  color: #777 !important;
+}
+
+/* ---------- Paragraphs and Quotes ---------- */
+body.dark-mode #ln p,
+body.dark-mode #ln blockquote {
+  background-color: transparent !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode blockquote {
+  border-left: 4px solid #555;
+}
+
+/* ---------- Links ---------- */
+body.dark-mode a,
+body.dark-mode #ln a,
+body.dark-mode .content a,
+body.dark-mode .article a {
+  color: #80bfff !important; /* soft blue */
+  background: transparent !important;
+  text-decoration: none !important;
+}
+
+body.dark-mode a:hover {
+  color: #ffd700 !important; /* gold hover */
+  text-decoration: underline !important;
+}
+
+/* ---------- Headings ---------- */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #e0e0e0 !important;
+}
+
+/* ---------- Meta & Comments ---------- */
+body.dark-mode .meta-top,
+body.dark-mode .meta-top a,
+body.dark-mode .meta-bottom,
+body.dark-mode .meta-bottom a,
+body.dark-mode .comment h5 a,
+body.dark-mode .comment .reply,
+body.dark-mode .comment time {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .meta-top a:hover,
+body.dark-mode .meta-bottom a:hover,
+body.dark-mode .comment .reply:hover {
+  color: #ffd700 !important;
+}
+
+/* ---------- Hero Section ---------- */
+body.dark-mode #hero,
+body.dark-mode #hero .container {
+  background-color: #000 !important;
+  color: #e0e0e0 !important;
+  border: none !important;
+  background-image: none !important;
+}
+
+body.dark-mode #hero h1,
+body.dark-mode #hero p {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode #hero .btn-get-started {
+  background-color: #111 !important;
+  color: #ffd700 !important;
+  border: 1px solid #444 !important;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode #hero .btn-get-started:hover {
+  background-color: #ffd700 !important;
+  color: #000 !important;
+  border-color: #ffd700 !important;
+}
+
+body.dark-mode #hero .hero-img img {
+  filter: brightness(0.85) contrast(1.1);
+  transition: filter 0.3s ease;
+}
+
+/* ---------- Page Title ---------- */
+body.dark-mode .page-title,
+body.dark-mode .page-title .container {
+  background-color: #000 !important;
+  color: #e0e0e0 !important;
+  background-image: none !important;
+}
+
+body.dark-mode .page-title h1,
+body.dark-mode .page-title p {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .page-title a {
+  color: #80bfff !important;
+}
+
+body.dark-mode .page-title a:hover {
+  color: #ffd700 !important;
+}
+
+/* ---------- Footer ---------- */
+body.dark-mode #footer {
+  background-color: #000 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode #footer a {
+  color: #ccc !important;
+}
+
+body.dark-mode #footer a:hover {
+  color: #ffd700 !important;
+  text-decoration: underline;
+}
+
+/* ---------- Lists ---------- */
+body.dark-mode ul,
+body.dark-mode ol,
+body.dark-mode li {
+  background-color: transparent !important;
+  color: #e0e0e0 !important;
+}
+
+/* ---------- Scroll-top ---------- */
+body.dark-mode .scroll-top {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ---------- Fix 1: Links hover color ---------- */
+body.dark-mode a:hover,
+body.dark-mode #ln a:hover,
+body.dark-mode .content a:hover,
+body.dark-mode .article a:hover {
+  color: #ffd700 !important; /* gold */
+  text-decoration: underline !important;
+}
+
+/* Ensure visited and active links don’t override hover */
+body.dark-mode a:visited {
+  color: #80bfff !important;
+}
+body.dark-mode a:active {
+  color: #ffd700 !important;
+}
+
+/* ---------- Fix 2: Bootstrap Icons visibility ---------- */
+/* Bootstrap icons use currentColor, so they appear black if parent color is dark */
+body.dark-mode i.bi,
+body.dark-mode svg.bi {
+  color: #e0e0e0 !important; /* make icons light gray */
+  fill: #e0e0e0 !important;
+}
+
+/* Optional: gold color when hovering icons inside links */
+body.dark-mode a:hover i.bi,
+body.dark-mode a:hover svg.bi {
+  color: #ffd700 !important;
+  fill: #ffd700 !important;
+}
