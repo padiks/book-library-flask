@@ -11,7 +11,7 @@ This is a Flask-based Book Library project that organizes books, volumes, and ch
 
 ### Requirements
 
-- Python 3.x
+- Python
 - Flask
 - Waitress (for production-like serving )
 - Optional: `markdown` library for rendering chapters dynamically
