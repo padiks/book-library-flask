@@ -106,8 +106,8 @@
   <div class="widgets-container">
 		<div class="search-widget widget-item">
 			<h3 class="widget-title">Search</h3>
-			<form action="http://localhost:8080/tools/codeigniter/search" method="get">
-				<input type="text" name="q" placeholder="Search..." required>
+			<form action="{{ url_for('search') }}" method="get">
+				<input type="text" name="q" placeholder="Search..." value="{{ request.args.get('q', '') }}" required>
 				<button type="submit" title="Search"><i class="bi bi-search"></i></button>
 			</form>
 		</div>		
