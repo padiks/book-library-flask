@@ -18,7 +18,7 @@ This is a Flask-based Book Library project that organizes books, volumes, and ch
 
 ### Notes
 
-- Simplified for **learning Flask and Waitress**.
+- Simplified for **learning Flask and mod_wsgi**.
 - Uses **template inheritance** (`base.html` ? page templates) for easy customization.
 - Can be extended later with **dynamic routes**, search, or login functionality.
 
