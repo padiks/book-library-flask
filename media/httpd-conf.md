@@ -1,3 +1,4 @@
+```conf
 Listen 4000
 
 # === Flask app configuration ===
@@ -12,4 +13,6 @@ LoadModule wsgi_module "C:/Users/[NAME]/AppData/Local/Programs/Python/[VERSION]/
     <Directory "C:/laragon/www/tools/flaskapp">
         Require all granted
     </Directory>
+
 </VirtualHost>
+```
