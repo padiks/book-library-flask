@@ -1,4 +1,4 @@
-# Book Library (Flask + mod_wsgi)
+# Book Library (Flask + Waitress/mod_wsgi)
 
 This is a Flask-based Book Library project that organizes books, volumes, and chapters in Markdown format and uses base templates for rendering.
 
@@ -13,12 +13,12 @@ This is a Flask-based Book Library project that organizes books, volumes, and ch
 
 - Python
 - Flask
-- mod_wsgi or Waitress (for production-like serving )
+- Waitress or mod_wsgi (for production-like serving )
 - `markdown` library for rendering chapters dynamically
 
 ### Notes
 
-- Simplified for **learning Flask and mod_wsgi**.
+- Simplified for **learning Flask and Waitress/mod_wsgi**.
 - Uses **template inheritance** (`base.html` - page templates) for easy customization.
 - Can be extended later with **dynamic routes**, search, or login functionality.
 
