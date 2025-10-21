@@ -13,7 +13,7 @@ This is a Flask-based Book Library project that organizes books, volumes, and ch
 
 - Python
 - Flask
-- Waitress (for production-like serving )
+- mod_wsgi or Waitress (for production-like serving )
 - Optional: `markdown` library for rendering chapters dynamically
 
 ### Notes
